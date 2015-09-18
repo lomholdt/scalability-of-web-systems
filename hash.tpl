@@ -19,26 +19,26 @@
 		
 				<button type="submit" class="btn btn-primary">Submit</button>
 		</form>	
-			{if isset($output)}
-				<div>
-					<table class="table table-hover">
-						<thead>
+		{if isset($input)}
+			<div>
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Hash Function</th>
+							<th>Hash</th>
+						</tr>
+					</thead>
+					<tbody>
+						{foreach from=hash_algos() item=hashFunction}
 							<tr>
-								<th>Hash Function</th>
-								<th>Hash</th>
+					    		<td>{$hashFunction}</td>
+					    		<td>{ hash($hashFuction, $input) }</td>
 							</tr>
-						</thead>
-						<tbody>
-								{foreach from=$output key=hashFunction item=hash}
-									<tr>
-							    		<td>{$hashFunction}</td>
-							    		<td>{$hash}</td>
-									</tr>
-								{/foreach}
-						</tbody>
-					</table>
-				</div>
-			{/if}
+						{/foreach}
+					</tbody>
+				</table>
+			</div>
+		{/if}
 	</div>
 </body>
 </html>
