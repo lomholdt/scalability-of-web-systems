@@ -1,1 +1,3 @@
 templates_c/
+.DS_Store
+vendor/
