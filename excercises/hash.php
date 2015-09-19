@@ -1,5 +1,4 @@
 <?php 
-// require_once('/usr/share/php/smarty3/Smarty.class.php');
 require __DIR__ . '/vendor/autoload.php';
 $smarty = new Smarty;
 
